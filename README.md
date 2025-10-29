@@ -2,7 +2,7 @@
 
 This repo is the official Pytorch implementation of our paper:
 
-> [**MTFL: Multi-Timescale Feature Learning for Weakly-supervised Anomaly Detection in Surveillance Videos**](https://arxiv.org/pdf/2410.05900v1.pdf)
+> [**MTFL: Multi-Timescale Feature Learning for Weakly-supervised Anomaly Detection in Surveillance Videos**](https://arxiv.org/pdf/2410.05900)
 >
 <!--Author list-->
 
