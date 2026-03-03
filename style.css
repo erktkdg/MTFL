@@ -1,49 +1,86 @@
+/* Header typography */
+.hero {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+h1 {
+  font-size: 2.15rem;
+  margin: 0 0 12px;
+  letter-spacing: -0.2px;
+}
+
+/* Authors: bigger than body, smaller than title */
+.authors {
+  margin: 0 0 6px;
+  font-size: 1.12rem;   /* bigger */
+  color: #1f2937;
+}
+
+.authors .comma {
+  margin-right: 6px;
+}
+
+.author-link {
+  color: #1a73e8;       /* blue */
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.author-link:hover {
+  text-decoration: underline;
+}
+
+.affiliation {
+  margin: 0 0 18px;
+  color: #555;
+  font-size: 0.98rem;
+}
+
+/* DepthCrafter-like pill buttons */
 .linkrow {
   display: flex;
   justify-content: center;
   gap: 12px;
   flex-wrap: wrap;
-  margin: 14px 0 10px;
+  margin: 10px 0 10px;
 }
 
 .pill {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 10px 18px;
+  padding: 10px 16px;
   border-radius: 999px;
   text-decoration: none;
-  font-size: 0.98rem;
+  font-size: 0.95rem;
   font-weight: 600;
-  line-height: 1;
+  transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease, border-color 120ms ease;
   user-select: none;
-  -webkit-font-smoothing: antialiased;
-  transition: transform 120ms ease, box-shadow 120ms ease, filter 120ms ease;
 }
 
-/* “DepthCrafter-like” dark pill */
+/* Dark variant (matches the screenshot style) */
 .pill-dark {
-  background: #1f1f1f;
-  color: #ffffff;
-  border: 1px solid rgba(255,255,255,0.10);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.16);
+  background: #111;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
 }
 
 .pill-dark:hover {
   transform: translateY(-1px);
-  filter: brightness(1.06);
-  box-shadow: 0 10px 22px rgba(0,0,0,0.20);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.16);
+  border-color: rgba(255,255,255,0.20);
 }
 
 .pill-dark:active {
   transform: translateY(0px);
-  filter: brightness(0.98);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.16);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
 }
 
 .pill:focus {
   outline: none;
-  box-shadow: 0 0 0 4px rgba(26,115,232,0.25), 0 10px 22px rgba(0,0,0,0.20);
+  box-shadow: 0 0 0 4px rgba(26,115,232,0.25), 0 10px 24px rgba(0,0,0,0.16);
 }
 
 .pill-icon {
@@ -52,11 +89,15 @@
   justify-content: center;
   min-width: 18px;
   height: 18px;
-  font-size: 0.98rem;
+  font-size: 0.95rem;
   color: currentColor;
 }
 
 .pill svg {
   display: block;
   fill: currentColor;
+}
+
+.pill-text {
+  letter-spacing: 0.1px;
 }
