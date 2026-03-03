@@ -58,26 +58,26 @@
     <section>
       <h2>Overview</h2>
       <p>
-        This page provides an overview of MTFL for weakly supervised video anomaly detection, including method summary,
-        qualitative results, and resources.
+        Anomaly detection for public safety requires modeling fine-grained motion and contextual information across multiple time scales. 
+        We propose Multi-Timescale Feature Learning (MTFL), which leverages short-, medium-, and long-term temporal tubelets within a Video Swin Transformer to enhance spatio-temporal representations. 
+        MTFL achieves 89.78% AUC on UCF-Crime, outperforming existing methods, and demonstrates complementary performance with 95.32% AUC on ShanghaiTech and 84.57% AP on XD-Violence. 
+        In addition, we introduce the Video Anomaly Detection Dataset (VADD), an extended version of UCF-Crime containing 2,591 videos across 18 anomaly classes.
       </p>
 
       <!-- IMPORTANT: ensure these filenames match exactly what you have in /figures -->
-      <img class="figure" src="figures/Intro.png" alt="Teaser figure">
-      <p class="caption">Figure 1: Teaser / qualitative examples.</p>
-    </section>
-
-    <section>
-      <h2>Abstract</h2>
-      <p>
-        (Paste the abstract here.)
-      </p>
+      <img class="figure" src="figures/Workflow.png" alt="Teaser figure">
+      <p class="caption">Workflow of Multi-Timescale Feature Learning (MTFL) model. The input video is segmented into 𝑇 snippets. 
+        The Multi- Timescale Feature Generator (MTFG) creates three sets of 𝑇 features of 𝐷 dimensions, 𝐅L, 𝐅M, and 𝐅S, corresponding to features extracted within long, medium, and short temporal tubelets. 
+        Next, the Multi-Timescale Feature Fusion (MTFF) captures the correlations among three features and the dependencies among different video snippets to fuse the features into the output feature matrix 𝐗. 
+        The final anomaly scores of 𝑇 snippets are obtained after a classifier. A loss function involving feature magnitude loss and classification loss is used for training the MTFF and the classifier. </p>
     </section>
 
     <section>
       <h2>Method</h2>
-      <img class="figure" src="figures/figure2.jpg" alt="Method overview">
-      <p class="caption">Figure 2: Method overview.</p>
+      <img class="figure" src="figures/Qualitative.jpg" alt="Method overview">
+      <p class="caption">Anomaly scores of the proposed MTFL model on the UCF-Crime data (Normal897, Arson016, Shooting004, Robbery102, Burglary037, Fighting033, and Shoplifting004) and 
+        a dangerous throwing video from the VADD (CarDangerous024). 
+        The red-colored regions indicate the manually labeled occurrences of anomalous events. </p>
     </section>
 
     <section>
