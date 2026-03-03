@@ -1,103 +1,170 @@
-/* Header typography */
-.hero {
-  text-align: center;
-  margin-bottom: 28px;
+:root{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
 }
 
-h1 {
-  font-size: 2.15rem;
-  margin: 0 0 12px;
-  letter-spacing: -0.2px;
+body{
+  margin:0;
+  background:#fff;
+  color:#111;
+  line-height:1.6;
+}
+
+.container{
+  max-width:980px;
+  margin:0 auto;
+  padding:34px 18px 64px;
+}
+
+/* Header */
+.hero{
+  text-align:center;
+  margin-bottom:28px;
+}
+
+h1{
+  font-size:2.15rem;
+  margin:0 0 12px;
+  letter-spacing:-0.2px;
 }
 
 /* Authors: bigger than body, smaller than title */
-.authors {
-  margin: 0 0 6px;
-  font-size: 1.12rem;   /* bigger */
-  color: #1f2937;
+.authors{
+  margin:0 0 6px;
+  font-size:1.12rem;
+  color:#1f2937;
 }
 
-.authors .comma {
-  margin-right: 6px;
+.authors .comma{
+  margin-right:6px;
 }
 
-.author-link {
-  color: #1a73e8;       /* blue */
-  text-decoration: none;
-  font-weight: 600;
+.author-link{
+  color:#1a73e8;
+  text-decoration:none;
+  font-weight:600;
 }
 
-.author-link:hover {
-  text-decoration: underline;
+.author-link:hover{
+  text-decoration:underline;
 }
 
-.affiliation {
-  margin: 0 0 18px;
-  color: #555;
-  font-size: 0.98rem;
+.affiliation{
+  margin:0 0 18px;
+  color:#555;
+  font-size:0.98rem;
 }
 
-/* DepthCrafter-like pill buttons */
-.linkrow {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin: 10px 0 10px;
+/* DepthCrafter-like dark pill buttons */
+.linkrow{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+  margin:14px 0 10px;
 }
 
-.pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 16px;
-  border-radius: 999px;
-  text-decoration: none;
-  font-size: 0.95rem;
-  font-weight: 600;
-  transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease, border-color 120ms ease;
-  user-select: none;
+.pill{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:10px 18px;
+  border-radius:999px;
+  text-decoration:none;
+  font-size:0.98rem;
+  font-weight:600;
+  line-height:1;
+  user-select:none;
+  -webkit-font-smoothing:antialiased;
+  transition:transform 120ms ease, box-shadow 120ms ease, filter 120ms ease, border-color 120ms ease;
 }
 
-/* Dark variant (matches the screenshot style) */
-.pill-dark {
-  background: #111;
-  color: #fff;
-  border: 1px solid rgba(255,255,255,0.12);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+.pill-dark{
+  background:#1f1f1f;
+  color:#fff;
+  border:1px solid rgba(255,255,255,0.10);
+  box-shadow:0 8px 18px rgba(0,0,0,0.16);
 }
 
-.pill-dark:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.16);
-  border-color: rgba(255,255,255,0.20);
+.pill-dark:hover{
+  transform:translateY(-1px);
+  filter:brightness(1.06);
+  box-shadow:0 10px 22px rgba(0,0,0,0.20);
+  border-color:rgba(255,255,255,0.16);
 }
 
-.pill-dark:active {
-  transform: translateY(0px);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+.pill-dark:active{
+  transform:translateY(0px);
+  filter:brightness(0.98);
+  box-shadow:0 6px 14px rgba(0,0,0,0.16);
 }
 
-.pill:focus {
-  outline: none;
-  box-shadow: 0 0 0 4px rgba(26,115,232,0.25), 0 10px 24px rgba(0,0,0,0.16);
+.pill:focus{
+  outline:none;
+  box-shadow:0 0 0 4px rgba(26,115,232,0.25), 0 10px 22px rgba(0,0,0,0.20);
 }
 
-.pill-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 18px;
-  height: 18px;
-  font-size: 0.95rem;
-  color: currentColor;
+.pill-icon{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:18px;
+  height:18px;
+  color:currentColor;
 }
 
-.pill svg {
-  display: block;
-  fill: currentColor;
+.pill svg{
+  display:block;
+  width:18px;
+  height:18px;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.8;
+  stroke-linecap:round;
+  stroke-linejoin:round;
 }
 
-.pill-text {
-  letter-spacing: 0.1px;
+.hf-emoji{
+  font-size:1.05rem;
+  line-height:1;
+}
+
+/* Sections */
+section{
+  margin-top:34px;
+}
+
+h2{
+  font-size:1.28rem;
+  margin:0 0 10px;
+}
+
+/* Figures */
+.figure{
+  width:100%;
+  border-radius:12px;
+  border:1px solid #eee;
+  margin-top:10px;
+}
+
+.caption{
+  font-size:0.92rem;
+  color:#555;
+  margin-top:6px;
+}
+
+/* BibTeX */
+.bibtex{
+  background:#f5f5f5;
+  padding:14px 16px;
+  border-radius:12px;
+  overflow-x:auto;
+  font-size:0.92rem;
+}
+
+/* Footer */
+.footer{
+  margin-top:44px;
+  text-align:center;
+  color:#777;
+  font-size:0.92rem;
 }
