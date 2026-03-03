@@ -30,7 +30,7 @@ h1{
 /* Authors: bigger than body, smaller than title */
 .authors{
   margin:0 0 6px;
-  font-size:1.12rem;
+  font-size:1.25rem;
   color:#1f2937;
 }
 
@@ -51,7 +51,7 @@ h1{
 .affiliation{
   margin:0 0 18px;
   color:#555;
-  font-size:0.98rem;
+  font-size:1.10rem;
 }
 
 /* DepthCrafter-like dark pill buttons */
